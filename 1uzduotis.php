@@ -1,5 +1,7 @@
-1.  Grąžinkite visų lyginių skaičių, esančių $numbers masyve, sumą (1 balas) +0.5 jeigu array funkcijos naudojamos
-*/
+<?php
+// 1.  Grąžinkite visų lyginių skaičių, esančių $numbers masyve, sumą (1 balas) +0.5 jeigu array funkcijos naudojamos
+// */
+
 
 $numbers = [
     15,
@@ -12,7 +14,9 @@ $numbers = [
     550,
 ];
 
-function exercises1()
-{
-
+function even($number) {
+    return $number % 2 == 0;
 }
+$evenNumbers = array_filter($numbers, "even");
+$arraySum = array_sum($evenNumbers);
+echo $arraySum;

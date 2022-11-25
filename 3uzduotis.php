@@ -1,13 +1,14 @@
-3. Masyve $holidays turime kelionių agentūros siūlomas keliones su kaina ir dalyvių skaičiumi.
- Terminale išspausdinkite santrauką, kurioje matytusi miesto pavadinimas, kelionių pavadinimai ir dalyvių sumokėta suma
- Dėmesio! Santraukoje nerodykite tų kelionių, kurių kaina yra null. (2 balai)
-*/
+<?php
+// 3. Masyve $holidays turime kelionių agentūros siūlomas keliones su kaina ir dalyvių skaičiumi.
+//  Terminale išspausdinkite santrauką, kurioje matytusi miesto pavadinimas, kelionių pavadinimai ir dalyvių sumokėta suma
+//  Dėmesio! Santraukoje nerodykite tų kelionių, kurių kaina yra null. (2 balai)
+// */
 
-//   Destination "Paris".
-//   Titles: "Romantic Paris", "Hidden Paris"
-//   Total: 99500
-//   ************
-//   Destination "New York"
+// //   Destination "Paris".
+// //   Titles: "Romantic Paris", "Hidden Paris"
+// //   Total: 99500
+// //   ************
+// //   Destination "New York"
 
 $holidays = [
     [
@@ -42,6 +43,22 @@ $holidays = [
     ],
 ];
 
+// var_dump($holidays[1]['destination']);
+
+// $keys = array_keys($holidays);
+// for($i = 0; $i < count($holidays); $i++) {
+//     echo $keys[$i] . "{<br>";
+//      foreach($holidays[$keys[$i]] as $key => $value) {
+//          echo $key . " : " . $value . "<br>";
+//      }
+//     echo "}<br>";
+//  }
+$keys = array_keys($holidays);
+for($i = 0; $i < count($holidays); $i++) {
+ foreach($holidays[$keys[$i]] as $key => $value) {
+    echo $key . " : " . $value . PHP_EOL;
+}
+}
 function exercises3()
 {
 
