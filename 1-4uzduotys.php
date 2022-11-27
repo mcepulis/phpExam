@@ -42,7 +42,7 @@ echo "Antros uduoties atsakymas --> " . exercises2($numbers2) . PHP_EOL;
 
 //3 Uzduotis
 
-echo "Trecia uzduotis: " . PHP_EOL;
+echo "Trecia ir ketvirta (holidayOffer.txt) uzduotys ----> " . PHP_EOL;
 $holidays = [
     [
         'title' => 'Romantic Paris',
@@ -120,23 +120,9 @@ function exercises3(array $list): void
             echo '************' . PHP_EOL;
         }
     };
+    $file = 'holidayOffer.txt';
+    $information = file_get_contents($file);
+    $information .= json_encode($newArray);
+    file_put_contents($file, $information);
 }
 exercises3($holidays);
-// $newHoliday = (exercise3($holidays));
-//4 Uzduotis
-
-function exercise4()
-
-{
-
-    $filename = 'holiday.txt';
-
-    $data = $newHoliday . "Turetu buti 3 Uzduoties atsakymas";
-
-    file_put_contents($filename, $data);
-
-}
-
-exercise4($holidays);
-
-?>
