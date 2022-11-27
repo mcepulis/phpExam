@@ -40,7 +40,7 @@ function exercises2($newNumbers2)
 }
 echo "Antros uduoties atsakymas --> " . exercises2($numbers2) . PHP_EOL;
 
-//3 Uzduotis
+//3 ir 4 Uzduotys
 
 echo "Trecia ir ketvirta (holidayOffer.txt) uzduotys ----> " . PHP_EOL;
 $holidays = [
@@ -126,3 +126,5 @@ function exercises3(array $list): void
     file_put_contents($file, $information);
 }
 exercises3($holidays);
+
+?>

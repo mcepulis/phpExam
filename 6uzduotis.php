@@ -9,3 +9,5 @@ $number = (int)$argv[1];
 $number2 = (int)$argv[2];
 $square = ($number * $number2)**2;
 echo $argv[1] ." " . $argv[2] . "-->> Your number is " . $square . PHP_EOL;
+
+?>
