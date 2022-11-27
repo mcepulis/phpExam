@@ -1,7 +1,3 @@
-
-// 7. Parašykite programą, kuri sugeneruotų ornamentą: https://iili.io/H3J974e.png . 
-// Ornamentas turi būti sugeneruotas naudojant HTML ir PHP. (2 balai)
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,10 +20,10 @@
 <body>
 
 <table>
-    <?php for ($i = 1; $i <= 8; $i++): ?>
+    <?php for ($i = 0; $i < 7 ; $i++): ?>
         <tr>
-            <?php for ($j = 1; $j <= 8; $j++): ?>
-                <td class="<?= ($j % 2 === 0 && $i % 2 === 0 || $j % 2 !== 0 && $i % 2 !== 0) ? 'even' : 'odd' ?>"></td>
+            <?php for ($j = 0; $j < 7; $j++): ?>
+                <td class="<?= ($j === $i || ($j + $i == 6)) ? 'even' : 'odd' ?>"></td>
             <?php endfor; ?>
         </tr>
     <?php endfor ?>
